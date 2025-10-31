@@ -1,0 +1,7 @@
+/* src/components/CustomerList.css */
+.customer-list-container {
+  width: 100%;
+  height: 100vh; /* Make it take full viewport height */
+  display: flex;
+  flex-direction: column;
+}

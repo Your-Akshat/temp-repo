@@ -1,0 +1,109 @@
+/* src/components/CustomerListToolbar.css */
+.toolbar-container {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* "All Customers 1230" Header */
+.toolbar-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.customer-count-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-left: 8px;
+  background-color: #e6f7f5;
+  color: #00897b;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* Search + Filter Controls */
+.toolbar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: #fff;
+  width: 300px;
+}
+
+.search-bar svg {
+  margin-right: 8px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.search-bar input::placeholder {
+  color: #9ca3af;
+}
+
+/* Filter Button and Dropdown */
+.filter-dropdown-container {
+  position: relative;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #f9fafb;
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: 110%; /* Position below the button */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 180px;
+  z-index: 10;
+}
+
+.filter-dropdown div {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+}
+
+.filter-dropdown div:last-child {
+  border-bottom: none;
+}
+
+.filter-dropdown div:hover {
+  background-color: #f9fafb;
+}
