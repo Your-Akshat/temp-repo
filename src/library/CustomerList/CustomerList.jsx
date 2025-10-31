@@ -1,9 +1,9 @@
 // src/components/CustomerList.js
 import React, { useState, useEffect, useCallback } from 'react';
-import CustomerListToolbar from './CustomerListToolbar';
-import CustomerTable from './CustomerTable';
-import { getCustomers, getCustomerCount } from '../data/api';
-import { useDebounce } from '../hooks/useDebounce'; // We'll create this hook
+import CustomerListToolbar from '../CustomerListToolbar/CustomerListToolbar';
+import CustomerTable from '../CustomerTable/CustomerTable';
+import { getCustomers, getCustomerCount } from '../../data/api';
+import { debounce } from 'lodash';
 import './CustomerList.css';
 
 // A simple hook to debounce input
@@ -30,7 +30,7 @@ export default function CustomerList({ isDbReady }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortConfig, setSortConfig] = useState({ key: 'name', direction: 'asc' });
   
-  const debouncedSearchTerm = useDebounce(searchTerm, 250);
+  const debouncedSearchTerm = debounce(searchTerm, 250);
 
   // This function fetches the total count
   const fetchCount = useCallback(async () => {

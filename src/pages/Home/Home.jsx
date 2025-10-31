@@ -1,35 +1,10 @@
 import React, { useEffect, useState } from "react";
 import './Home.css'
 import {populateDatabase} from "../../data/setup"
-import { PageHeader } from "../../library";
+import { PageHeader, CustomerList } from "../../library";
 import { getCustomerCount } from "../../data/api";
 
 const Home = () => {
-    // const [searchTerm, setSearchTerm] = useState('');
-    // const [customerCount, setCustomerCount] = useState(0);
-
-    // useEffect(()=>{
-    //     const populate = async () => {   
-    //         await populateDatabase();
-    //         console.log("population done")
-    //     }
-    //     populate();
-    // },[])
-    
-    // useEffect(() => {
-    //     const updateCount = async () => {
-    //         const temp = await getCustomerCount(searchTerm);
-    //         setCustomerCount(temp);
-    //     }
-    //     updateCount();
-    // }, [searchTerm]);
-
-    // return (
-    //     <div>
-    //         <PageHeader count={customerCount} />
-    //     </div>
-    // );
-
     const [isDbReady, setIsDbReady] = useState(false);
 
   // On initial app load, run the database population script
