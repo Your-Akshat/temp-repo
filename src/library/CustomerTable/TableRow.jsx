@@ -1,9 +1,7 @@
-// src/components/TableRow.js
 import React from 'react';
 import CustomerInfo from './CustomerInfo';
 import './CustomerTable.css';
 
-// Helper to format the date
 const formatDate = (dateString) => {
   const date = new Date(dateString);
   return date.toLocaleString('en-US', {
@@ -34,11 +32,10 @@ export default function TableRow({ customer }) {
         />
       </div>
       
-      {/* These map to the data from faker.js */}
       <div className="table-cell cell-score">{customer.score}</div>
       <div className="table-cell cell-email">{customer.email}</div>
-      <div className="table-cell cell-filter">-</div> {/* Dummy */}
-      <div className="table-cell cell-filter">-</div> {/* Dummy */}
+      <div className="table-cell cell-filter">-</div> 
+      <div className="table-cell cell-filter">-</div> 
       
       <div className="table-cell cell-last-message">
         {formatDate(customer.lastMessageAt)}

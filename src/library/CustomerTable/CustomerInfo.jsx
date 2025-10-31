@@ -1,6 +1,5 @@
-// src/components/CustomerInfo.js
 import React from 'react';
-import './CustomerTable.css'; // Share CSS
+import './CustomerTable.css';
 
 export default function CustomerInfo({ avatar, name, phone }) {
   return (
